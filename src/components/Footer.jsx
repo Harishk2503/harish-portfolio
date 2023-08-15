@@ -1,0 +1,54 @@
+import React from 'react'
+import logo from '../assets/images/logo.png'
+import { motion } from 'framer-motion'
+import { variables } from '../constant'
+// import { Link } from 'react-router-dom'
+import '../App.css'
+const Footer =()=>{
+    return<>
+        <footer className="w-full py-16 bg-black">
+  <div className="md:px-12 lg:px-28">
+    <div className="container flex flex-col items-center m-auto space-y-6 text-gray-400">
+    <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <span className='drop-shadow-md text-center text-slate-200 text-shadow font-extrabold text-4xl'>Harish Kullenthran</span>
+    </a>
+      <ul className="py-4 flex flex-col gap-2 items-center justify-center sm:flex-row sm:gap-2">
+      <motion.div whileHover={{ scale: 1.2 }} >
+      <a href="/#" className="mr-9 font-bold hover:text-[#2940D3]">Home</a>
+      </motion.div>
+    <motion.div whileHover={{ scale: 1.2 }} >
+      <a href="/#about" className="mr-9 font-bold hover:text-[#2940D3]">About Me</a>
+      </motion.div>
+    <motion.div whileHover={{ scale: 1.2 }} >
+      <a href="/#portfolio" className="mr-9 font-bold hover:text-[#2940D3]">Work</a>
+      </motion.div>
+    <motion.div whileHover={{ scale: 1.2 }} >
+      <a href="/#resume" className="mr-9 font-bold hover:text-[#2940D3]">Resume</a>
+      </motion.div>
+      </ul>
+      <div className="w-max m-auto flex items-center justify-between space-x-4">
+        <a href="tel:+447852825820" aria-label="call">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 m-auto" viewBox="0 0 16 16">
+            <path fillRule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+          </svg>
+        </a>
+        <a href="kullenthran@gmail.com" aria-label="send mail">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 m-auto" viewBox="0 0 16 16">
+            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+          </svg>
+        </a>
+        <a href="https://github.com/Harishk2503?tab=repositories" title="github" target="blank" aria-label="github">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 m-auto" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" /></svg>
+
+        </a>
+
+      </div>
+      <div className="text-center">
+      </div>
+    </div>
+  </div>
+</footer>
+    </>
+}
+
+export default Footer;
